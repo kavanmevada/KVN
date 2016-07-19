@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Parallex</title>
+
+        <style>
+
+            * {
+              margin: 0;
+              padding: 0;
+            }
+
+            body {
+              background-color: rgba(255, 245, 245, 1);
+            }
+
+            #slider {
+                position: relative;
+                margin-top: 30px;
+                width: 100%;
+                height: 100vh;
+                background: url("parallax.jpg");
+                background-size: cover;
+                background-position: center;
+                display: block;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+            #slider_two {
+                position: relative;
+                margin-top: 30px;
+                width: 100%;
+                height: 100vh;
+                background: url("parallax.jpg");
+                background-size: cover;
+                background-position: center;
+                display: block;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+
+            .over_layer {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+			           visibility: none;
+              z-index: 10;
+              background-color: transparent;
+            }
+
+            .p_layer {
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+              margin: auto;
+              position: absolute;
+              top: 0; left: 0; bottom: 0; right: 0;
+            }
+
+            .center_ele {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              z-index: 1;
+              -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+            }
+
+            .center_ele1 {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              z-index: -1;
+              -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+            }
+
+            .center_ele2 {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              z-index: -2;
+              -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+            }
+
+            .center_ele3 {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              z-index: 4;
+              -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+            }
+
+            .center_ele4 {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              z-index: 5;
+              -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+            }
+
+            .center_ele5 {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+			           z-index: -5;
+              -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+            }
+
+
+        </style>
+
+    </head>
+
+<body id="main_page">
+
+<!--<div style="width:30%;height:2200px;position:relative;float:left;background-color:red;"></div>
+<div style="width:70%;height:2200px;position:relative;float:right;background-color:green;">-->
+  <div id="slider">
+    <div id="warpper">
+      <div class="over_layer"></div>
+      <div class="p_layer">
+        <img src="frame.png" class="center_ele" />
+      </div>
+      <div class="p_layer">
+        <img src="back.png" class="center_ele1" />
+      </div>
+      <div class="p_layer">
+        <img src="k_s.png" class="center_ele2" />
+      </div>
+      <div class="p_layer">
+        <img src="a_s.png" class="center_ele3" />
+      </div>
+      <div class="p_layer">
+        <img src="v_s.png" class="center_ele4" />
+      </div>
+      <div class="p_layer">
+        <img src="n_s.png" class="center_ele5" />
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+<!--<script src="anim_mous_bg_0.1.js"></script>-->
+<script src="flex-parallax_mini.js"></script>
+<script>
+flexparallax('warpper');
+</script>
+</html>
